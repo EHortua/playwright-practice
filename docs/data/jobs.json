@@ -1,0 +1,122 @@
+[
+  {
+    "id": "qa-001",
+    "title": "Testing Engineer",
+    "department": "Quality",
+    "location": "Bogotá",
+    "remote": true,
+    "level": "Mid",
+    "summary": "Own test automation for UI, API and AI features on client projects. You will write Playwright tests, add them to CI, and help evaluate AI assistant answers.",
+    "skills": ["Playwright", "TypeScript", "API testing", "CI/CD", "LLM evaluation"]
+  },
+  {
+    "id": "qa-002",
+    "title": "Senior QA Automation Engineer",
+    "department": "Quality",
+    "location": "Remote – Colombia",
+    "remote": true,
+    "level": "Senior",
+    "summary": "Design test frameworks from scratch for new client projects and coach developers on testing practices.",
+    "skills": ["Playwright", "Cypress", "Jenkins", "SQL", "BDD"]
+  },
+  {
+    "id": "qa-003",
+    "title": "AI Quality Analyst",
+    "department": "Quality",
+    "location": "Toronto",
+    "remote": false,
+    "level": "Mid",
+    "summary": "Build golden datasets and evaluation suites for AI assistants, and track hallucination and refusal rates over time.",
+    "skills": ["Python", "pytest", "RAG evaluation", "Statistics"]
+  },
+  {
+    "id": "eng-001",
+    "title": "Full-Stack Developer",
+    "department": "Engineering",
+    "location": "Bogotá",
+    "remote": false,
+    "level": "Mid",
+    "summary": "Build web applications end to end, from React front ends to Node.js services on the cloud.",
+    "skills": ["React", "Node.js", "PostgreSQL"]
+  },
+  {
+    "id": "eng-002",
+    "title": "Staff Backend Engineer",
+    "department": "Engineering",
+    "location": "Lviv",
+    "remote": true,
+    "level": "Staff",
+    "summary": "Lead the architecture of event-driven backends that serve AI features at scale.",
+    "skills": ["Java", "Kafka", "AWS"]
+  },
+  {
+    "id": "eng-003",
+    "title": "Mobile Developer",
+    "department": "Engineering",
+    "location": "Toronto",
+    "remote": false,
+    "level": "Senior",
+    "summary": "Ship native iOS and Android apps that bring AI assistants into people's pockets.",
+    "skills": ["Swift", "Kotlin", "Appium"]
+  },
+  {
+    "id": "ai-001",
+    "title": "Applied AI Engineer",
+    "department": "Data & AI",
+    "location": "Remote – US",
+    "remote": true,
+    "level": "Senior",
+    "summary": "Build retrieval-augmented assistants and agents, from prompt design to production monitoring.",
+    "skills": ["Python", "LLMs", "RAG", "Vector search"]
+  },
+  {
+    "id": "ai-002",
+    "title": "Data Engineer",
+    "department": "Data & AI",
+    "location": "Bogotá",
+    "remote": true,
+    "level": "Mid",
+    "summary": "Create the data pipelines that feed AI features, with data-quality checks at every step.",
+    "skills": ["Python", "SQL", "Airflow", "Data quality"]
+  },
+  {
+    "id": "des-001",
+    "title": "Product Designer",
+    "department": "Design",
+    "location": "Remote – Colombia",
+    "remote": true,
+    "level": "Mid",
+    "summary": "Design conversational and web experiences that make AI feel simple and trustworthy.",
+    "skills": ["Figma", "UX research", "Conversation design"]
+  },
+  {
+    "id": "des-002",
+    "title": "UX Researcher",
+    "department": "Design",
+    "location": "Toronto",
+    "remote": false,
+    "level": "Senior",
+    "summary": "Run user research that decides what we build, and test AI features with real users.",
+    "skills": ["Interviews", "Usability testing"]
+  },
+  {
+    "id": "del-001",
+    "title": "Delivery Manager",
+    "department": "Delivery",
+    "location": "Bogotá",
+    "remote": false,
+    "level": "Senior",
+    "summary": "Keep client projects on track: scope, risks, ceremonies and clear communication.",
+    "skills": ["Scrum", "Stakeholder management", "Jira"]
+  },
+  {
+    "id": "del-002",
+    "title": "Technical Program Manager",
+    "department": "Delivery",
+    "location": "Remote – US",
+    "remote": true,
+    "level": "Staff",
+    "summary": "Coordinate several delivery teams working on one client's AI programme.",
+    "skills": ["Program management", "Risk management"]
+  }
+]

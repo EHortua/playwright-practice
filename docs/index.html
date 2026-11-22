@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gears &amp; Ink — Applied AI studio (practice site)</title>
+  <meta name="description" content="A fictional applied-AI studio landing page, built as a target for test-automation practice.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement" id="announcement" role="region" aria-label="Announcement">
+    <p>New: our AI Readiness Sprint helps you pick the right first use case in two weeks. <a href="#services">Learn more</a></p>
+    <button type="button" class="announcement-close" aria-label="Dismiss announcement">✕</button>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#top" aria-label="Gears &amp; Ink home"><span class="logo-mark" aria-hidden="true">G&amp;I</span> Gears &amp; Ink</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#assistant">Assistant</a></li>
+          <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="eyebrow">Applied AI engineering studio</p>
+        <h1 id="hero-title">Ship AI that works for real people.</h1>
+        <p class="lead">Gears &amp; Ink pairs senior engineers with designers to take AI assistants from pilot to production in weeks, with quality built in from day one.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Let's build</a>
+          <a class="btn btn-ghost" href="#careers">See open roles</a>
+        </div>
+        <ul class="stats" aria-label="Studio facts">
+          <li><strong>6</strong><span>weeks from idea to production, on average</span></li>
+          <li><strong>4</strong><span>delivery hubs across the Americas and Europe</span></li>
+          <li><strong>12+</strong><span>years of experience per engineer, on average</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <p class="eyebrow">Services</p>
+        <h2 id="services-title">Where we start</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>AI Readiness Sprint</h3>
+            <p>Two weeks to find your strongest AI use case and leave with a sequenced build plan.</p>
+          </article>
+          <article class="card">
+            <h3>AI assistants and agents</h3>
+            <p>Assistants that answer from your own documents, with guardrails, evaluation and monitoring.</p>
+          </article>
+          <article class="card">
+            <h3>Cloud modernization</h3>
+            <p>Move legacy systems to the cloud so your data is ready for AI.</p>
+          </article>
+          <article class="card">
+            <h3>Quality engineering</h3>
+            <p>Test automation, CI/CD quality gates and AI evaluation, so every release is one you can trust.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">Results, not demos</h2>
+        <div class="cards cards-3">
+          <article class="card case">
+            <span class="tag">Retail</span>
+            <h3>A shopping assistant that knows the catalog</h3>
+            <p>Answers product questions from the live catalog and hands off to a person when unsure.</p>
+          </article>
+          <article class="card case">
+            <span class="tag">Healthcare</span>
+            <h3>Faster clinic scheduling</h3>
+            <p>An agent that books, moves and confirms appointments inside the clinic's existing system.</p>
+          </article>
+          <article class="card case">
+            <span class="tag">Education</span>
+            <h3>Course feedback, summarised</h3>
+            <p>Thousands of student comments grouped into themes, with every theme linked to its sources.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="careers" aria-labelledby="careers-title">
+      <div class="wrap">
+        <p class="eyebrow">Careers</p>
+        <h2 id="careers-title">Open roles</h2>
+        <p class="section-lead">Small, senior teams. Remote-friendly. Join us in Bogotá, Toronto, Lviv or from home.</p>
+
+        <form class="filters" id="job-filters" role="search" aria-label="Filter open roles">
+          <div class="field">
+            <label for="job-search">Search roles</label>
+            <input id="job-search" name="q" type="search" placeholder="e.g. QA, Playwright, data" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="job-department">Department</label>
+            <select id="job-department" name="dept">
+              <option value="">All departments</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="job-location">Location</label>
+            <select id="job-location" name="loc">
+              <option value="">All locations</option>
+            </select>
+          </div>
+          <div class="field field-check">
+            <input id="job-remote" name="remote" type="checkbox">
+            <label for="job-remote">Remote only</label>
+          </div>
+        </form>
+
+        <p class="results-count" data-testid="results-count" role="status" aria-live="polite"></p>
+        <div class="jobs-state" id="jobs-state" data-testid="jobs-state"></div>
+        <ul class="jobs" id="jobs-list" aria-label="Open roles"></ul>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="assistant" aria-labelledby="assistant-title">
+      <div class="wrap assistant-layout">
+        <div>
+          <p class="eyebrow">Try it</p>
+          <h2 id="assistant-title">Ask Inky, our assistant</h2>
+          <p class="section-lead">Inky answers questions about Gears &amp; Ink: services, open roles, offices and how to contact us. It is <strong>simulated</strong>: no real AI model is called, but its answers vary and take a moment, like a real one.</p>
+        </div>
+        <div class="chat" data-testid="chat">
+          <div class="chat-header">
+            <span class="chat-avatar" aria-hidden="true">i</span>
+            <div><strong>Inky</strong><span class="chat-sub">Simulated assistant</span></div>
+            <button type="button" class="chat-clear" id="chat-clear">Clear chat</button>
+          </div>
+          <div class="chat-log" id="chat-log" role="log" aria-label="Conversation with Inky" aria-live="polite"></div>
+          <p class="chat-typing" id="chat-typing" role="status" hidden>Inky is typing…</p>
+          <div class="chat-suggestions" aria-label="Suggested questions">
+            <button type="button" class="chip" data-question="What services do you offer?">What services do you offer?</button>
+            <button type="button" class="chip" data-question="How many open roles do you have?">How many open roles?</button>
+            <button type="button" class="chip" data-question="Where are your offices?">Where are your offices?</button>
+          </div>
+          <form class="chat-form" id="chat-form">
+            <label for="chat-input" class="visually-hidden">Message Inky</label>
+            <input id="chat-input" type="text" maxlength="280" placeholder="Ask a question…" autocomplete="off" aria-describedby="chat-counter">
+            <button type="submit" class="btn btn-primary" id="chat-send" disabled>Send</button>
+          </form>
+          <p class="chat-counter" id="chat-counter">0 / 280</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-layout">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let's build something</h2>
+          <p class="section-lead">Tell us about your project. We reply within two business days.</p>
+        </div>
+
+        <div>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="error-summary" id="error-summary" role="alert" tabindex="-1" hidden></div>
+
+            <div class="field">
+              <label for="name" class="required">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="field-error" id="name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="email" class="required">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+              <p class="field-error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="company">Company <span class="optional">(optional)</span></label>
+              <input id="company" name="company" type="text" autocomplete="organization" aria-describedby="company-error">
+              <p class="field-error" id="company-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="topic" class="required">What can we help with?</label>
+              <select id="topic" name="topic" required aria-describedby="topic-error">
+                <option value="">Choose a topic</option>
+                <option value="readiness">AI Readiness Sprint</option>
+                <option value="assistants">AI assistants and agents</option>
+                <option value="cloud">Cloud modernization</option>
+                <option value="quality">Quality engineering</option>
+                <option value="other">Something else</option>
+              </select>
+              <p class="field-error" id="topic-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="message" class="required">Message</label>
+              <textarea id="message" name="message" rows="5" required aria-describedby="message-hint message-error"></textarea>
+              <p class="field-hint" id="message-hint"><span id="message-count">0</span> / 500 characters, at least 20</p>
+              <p class="field-error" id="message-error"></p>
+            </div>
+
+            <div class="field field-check">
+              <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error">
+              <label for="consent" class="required">I agree that Gears &amp; Ink may contact me about this request.</label>
+              <p class="field-error" id="consent-error"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="contact-submit">Send message</button>
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+          </form>
+
+          <div class="success" id="contact-success" role="status" tabindex="-1" hidden>
+            <h3>Message sent</h3>
+            <p id="success-text"></p>
+            <p>Your reference is <strong data-testid="reference-id" id="reference-id"></strong>.</p>
+            <button type="button" class="btn btn-ghost" id="contact-reset">Send another message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>Gears &amp; Ink</strong> · Bogotá · Toronto · Lviv · Remote</p>
+      <p class="disclaimer">Gears &amp; Ink is a fictional company. This site was built as a target for test-automation practice and is not affiliated with any real company.</p>
+    </div>
+  </footer>
+</body>
+</html>
