@@ -1,0 +1,27 @@
+{
+  "name": "playwright-practice",
+  "version": "1.0.0",
+  "description": "A small landing page for a **fictional** applied-AI studio, *Gears & Ink*, built as a target for test-automation practice: a UI to test with Playwright, data to validate, a simulated AI assistant, and CI to wire up.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EHortua/playwright-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/EHortua/playwright-practice/issues"
+  },
+  "homepage": "https://github.com/EHortua/playwright-practice#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6"
+  }
+}
