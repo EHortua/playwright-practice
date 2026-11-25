@@ -6,7 +6,28 @@ A small landing page for a **fictional** applied-AI studio, *Gears & Ink*, built
 
 > Gears & Ink is a fictional company. The site is not affiliated with any real company.
 
-## Run it locally
+## Run the tests
+
+```bash
+npm ci                                  # install dependencies
+npx playwright install --with-deps      # install browsers (first time only)
+npm test                                # runs every test, in all configured browsers
+npx playwright test --project=chromium  # one browser only
+npm run test:ui                         # Playwright UI mode, for debugging
+npm run report                          # open the last HTML report
+```
+
+Tests run against the local copy of the site in `docs/`. Playwright starts it for you (see `webServer` in `playwright.config.ts`). To test the live GitHub Pages site instead, set `BASE_URL`:
+
+```bash
+BASE_URL=https://ehortua.github.io/playwright-practice/ npm test
+```
+
+CI runs the same suite on every push and pull request (`.github/workflows/playwright.yml`) and uploads the HTML report as an artifact.
+
+## Run the site locally
+
+
 
 The site is plain HTML, CSS and JavaScript in [`docs/`](docs/) (GitHub Pages serves that folder). It uses ES modules and `fetch`, so open it through a local server, not as a file:
 
@@ -50,11 +71,16 @@ Most elements have accessible names, so prefer `getByRole` and `getByLabel`; the
 
 ## Practice roadmap
 
-- [ ] Set up Playwright with TypeScript (`npm init playwright@latest`) and a first smoke test
-- [ ] Config: `baseURL` from an environment variable, retries and trace on CI
+The steps below follow the study guide in the R&P interview prep (Lesson 8). Each one ends with a check you can verify.
+
+- [x] Set up Playwright with TypeScript and a first test
+- [x] GitHub Actions workflow that runs the suite and uploads the report
+- [ ] Config: `webServer` starts the site, so CI needs no secret; `package.json` scripts and metadata fixed
+- [ ] Replace the two tests that open playwright.dev with tests of the Gears & Ink site (keep one as a reference)
+- [ ] Landing-page smoke suite with `@smoke` tag (navigation, hero, footer)
 - [ ] Page objects and fixtures for the jobs list, the chat and the contact form
 - [ ] Data-driven tests for the form's validation rules (boundaries: 1, 2, 60, 61 characters…)
 - [ ] Network mocking with `page.route()` for the jobs states
-- [ ] AI-style tests for Inky: assert intents, sources and guardrails, run cases several times
+- [ ] Tests for Inky: assert intents, sources and guardrails; repeat cases with different seeds; mutation check that a broken intent fails
 - [ ] GitHub Actions: run the suite on every pull request and upload the HTML report
 - [ ] Gherkin scenarios for one flow (optional)
